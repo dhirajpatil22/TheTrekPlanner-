@@ -61,4 +61,43 @@ userRouter.post("/signup", (req, res) => {
         });
 });
 
+userRouter.post("/AdminSignup", (req, res) => {
+    let uuid = uuidv4();
+    const { name, email, phone, address } = req.body;
+    // Password hashing for data security
+    const password = cryptoJs.SHA256(req.body.password).toString(cryptoJs.enc.Hex);
+
+    userModel.findOne({ email })
+        .then(async(data) => {
+
+            console.log(data, "DATTA");
+            if (data) {
+                
+                const updatedData = await userModel.findOneAndUpdate(
+                    { email },
+                    { $push: { userRoles: "admin" } },
+                    { new: true }
+                );
+                res.status(200).send({ message: "Added the Admin permission to user " + updatedData.name });
+            } else {
+                const model = new userModel({ email, password, name, phone, address, uuid });
+                model.userRoles.addToSet("admin");
+                model.save()
+                    .then((data) => {
+                        res.status(201).send({ message: "new Admin created successfully..", data});
+                    })
+                    .catch((err) => {
+                        console.log(err, "Error in save");
+                        res.status(500).send({ code: 500, message: "Internal Server Error" });
+                    });
+            }
+        })
+        .catch((err) => {
+            console.log(err, "Error in findOne");
+            res.status(500).send({ code: 500, message: "Internal Server Error" });
+        });
+});
+
+
+
 module.exports = userRouter;
