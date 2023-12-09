@@ -27,12 +27,21 @@ export function SignIn() {
         setErrorMessage("Invalid email or password. Please try again.");
         setSuccessMessage(""); // Reset success message
       } else {
+        console.log(response.data.data,"userRolesuserRoles")
         // Set success message and redirect to home
-        setSuccessMessage("Login successful. Redirecting to home...");
-        setErrorMessage(""); // Reset error message
-        setTimeout(() => {
-         navigate("/") // Redirect to the home page
-        }, 1500);
+        if (response.data.data.userRoles.includes("admin")) {
+            setSuccessMessage("Login successful. Redirecting to admin...");
+           
+              navigate("/admin",{ state: { fromLogin: response.data } }); // Redirect to admin page
+           
+          } else {
+            setSuccessMessage("Login successful. Redirecting to user...");
+            
+              navigate("/user",{ state: { fromLogin:  response.data } }); // Redirect to user page
+           
+          }
+        setErrorMessage("",{ state: { fromLogin: true } }); // Reset error message
+       
       }
     } catch (error) {
       console.log(error);
