@@ -4,7 +4,7 @@ import { Form, Col, Row, Button, Alert } from "react-bootstrap";
 import { useState } from "react";
 import { signUpAdmin, signUpUser } from "../services/userApis";
 
-export function SignUpForm() {
+export function SignUp() {
   const [formData, setFormdata] = useState({ name: "", email: "", password: "" });
   const [userType, setUserType] = useState("user");
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -52,7 +52,7 @@ export function SignUpForm() {
         console.log(response,"RES");
       }
 
-      if (response && response.status === 200) {
+      if (response && (response.status === 200 || response.status === 201)) {
         setResponseMessage("User Registered");
         setIsSubmitted(true);
         setTimeout(() => {
