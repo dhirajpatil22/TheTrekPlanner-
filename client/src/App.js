@@ -8,8 +8,10 @@ import { Home } from './components/Home';
 import { SignUp } from './components/SignUp';
 import { AboutUs } from './components/AboutUs';
 import { SignIn } from './components/SignIn';
+
 import { Admin } from './components/Admin';
 import { User } from './components/User';
+
 function App() {
   return (
     <BrowserRouter>
