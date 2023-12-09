@@ -14,8 +14,8 @@ export async function signUpUser(userData){
 export async function signUpAdmin(userData){
     try {
         console.log(userData,"userDatauserDatauserData")
-       await axios.post(`http://127.0.0.1:4000/user/adminSignup/`,userData);
-     
+        let resp=await axios.post(`http://127.0.0.1:4000/user/adminSignup/`,userData);
+        return resp;
        
     } catch (error) {
         console.log(error)
@@ -24,8 +24,8 @@ export async function signUpAdmin(userData){
 }
 export async function signIn(userData){
     try {
-       await axios.post(`http://127.0.0.1:4000/user/signin/`,userData);
-     
+       let resp=await axios.post(`http://127.0.0.1:4000/user/signin/`,userData);
+        return resp;
        
     } catch (error) {
         console.log(error)

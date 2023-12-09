@@ -20,7 +20,7 @@ export function NavigationBar(){
                 <LinkContainer to="/sign-up">
                 <Nav.Link>Sign Up</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/sign-up">
+                <LinkContainer to="/sign-in">
                 <Nav.Link>Sign In</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/about-us">
