@@ -8,6 +8,7 @@ import { Home } from './components/Home';
 import { SignUp } from './components/SignUp';
 import { AboutUs } from './components/AboutUs';
 import { SignIn } from './components/SignIn';
+//import SignUp from './components/SignUp';
 function App() {
   return (
     <BrowserRouter>

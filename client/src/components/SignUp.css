@@ -1,0 +1,147 @@
+/* .container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 150px;
+    width: 600px;
+    background: #fff;
+    padding-bottom: 30px;
+    border-radius: 15px;
+} */
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 30px;    
+}
+
+.text{
+    color: #3c009d;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.underline{
+    width: 60px;
+    height: 6px;
+    background: #3c009d;
+    border-radius: 9px;
+}
+
+.inputs{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 400px;
+    height: 50px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+.input:hover{
+    transform: scale(1.1);
+}
+
+.input img{
+    margin: 0px 20px;
+}
+
+.input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 18px;
+}
+
+.forgot-password{
+    padding-left: 360px;
+    margin-top: 10px;
+    color: #797979;
+    font-size: 18px;
+}
+
+.forgot-password span{
+    color: #4c00b4;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.radio-buttons{
+
+    margin-left: 360px;
+    margin-top: 23px;
+    
+
+}
+
+.submit-container{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 59px;
+    color: #fff;
+    background: #4c00b4;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    margin-left: 485px;
+    margin-top: 23px;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background: #4c00b4;
+    transform: scale(1.1);
+}
+.gray{
+    background: #EAEAEA;
+    color: #676767;
+}
+
+.admin-container{
+    padding-left: 690px;
+    margin-top: 15px;
+    color: #797979;
+   
+}
+
+.admin-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    color: #fff;
+    background: #797979;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer; 
+}
+
+.admin-submit:hover{
+    transform: scale(1.1);
+    background: #ffa600;
+}

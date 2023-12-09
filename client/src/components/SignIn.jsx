@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import { Header } from "./Header";
 import { Form, Button, Alert } from "react-bootstrap";
+import email_icon from './assets/email.png';
+import password_icon from './assets/password.png';
 
 import { signIn } from "../services/userApis";
 import { useNavigate } from "react-router-dom";
@@ -43,31 +45,36 @@ export function SignIn() {
 
   return (
     <Container>
-      <Header text="SignIn Here" />
+      <Header text="Sign In" />
       {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
       {successMessage && <Alert variant="success">{successMessage}</Alert>}
       <Form onSubmit={handleLogin}>
+      <div className="input">
+      <img src={email_icon} alt="" />
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Email</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter email"
+            placeholder="Email"
             name="email"
             value={formData.email}
             onChange={handleChange}
           />
         </Form.Group>
+        </div>
 
+        <div className="input">
+        <img src={password_icon} alt="" />
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          
           <Form.Control
             type="password"
-            placeholder="Enter password"
+            placeholder="Password"
             name="password"
             value={formData.password}
             onChange={handleChange}
           />
         </Form.Group>
+        </div>
 
         <Button variant="primary" type="submit">
           Login
