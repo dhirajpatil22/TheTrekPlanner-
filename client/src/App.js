@@ -9,8 +9,11 @@ import { SignUp } from './components/SignUp';
 import { AboutUs } from './components/AboutUs';
 import { SignIn } from './components/SignIn';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 02e0c01c887e97fd7b2fbabacf254b5b7096da50
 import { Admin } from './components/Admin';
 import { User } from './components/User';
 
