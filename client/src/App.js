@@ -8,7 +8,12 @@ import { Home } from './components/Home';
 import { SignUp } from './components/SignUp';
 import { AboutUs } from './components/AboutUs';
 import { SignIn } from './components/SignIn';
-//import SignUp from './components/SignUp';
+
+
+
+import { Admin } from './components/Admin';
+import { User } from './components/User';
+
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +25,8 @@ function App() {
       <Route path='/sign-up' element={<SignUp/>}></Route>
       <Route path='/sign-in' element={<SignIn/>}></Route>
       <Route path='/about-us' element={<AboutUs/>}></Route>
+      <Route path='/admin' element={<Admin/>}></Route>
+      <Route path='/user' element={<User/>}></Route>
     </Routes>
     </BrowserRouter>
   );
