@@ -5,7 +5,7 @@ const trekSchema=new mongoose.Schema({
         required: true,
         trekId:true
       },
-     name: {
+      name: {
         type: String,
         required: true,
         unique:true,
@@ -28,6 +28,10 @@ const trekSchema=new mongoose.Schema({
       duration: {
         type: String,
         required: true,
+      },
+      price:{
+        type:Number,
+        required:true,
       },
       description: {
         type: String,
