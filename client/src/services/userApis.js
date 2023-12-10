@@ -32,6 +32,19 @@ export async function signIn(userData){
     }
    
 }
+export async function getAllTreks(){
+    try {
+       
+      let resp= await axios.get(`http://127.0.0.1:4000/trek/getTreks/`
+      );
+      return resp;
+     
+       
+    } catch (error) {
+        console.log(error)
+    }
+   
+}
 export async function fetchStudents(){
     try {
         const res=await axios.post('http://127.0.0.1:4000/student')

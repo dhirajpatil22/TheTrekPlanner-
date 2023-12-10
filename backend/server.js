@@ -15,7 +15,7 @@ app.get("/",(req,res)=>{
 app.use((req,res,next)=>{
     console.log(`midlle ware is getting called..`);
     console.log(req.url,"DDGFG")
-    if(req.url.includes('/user/signin')||req.url.includes('/user/signup')|| req.url.includes('/user/adminSignup')){
+    if(req.url.includes('/user/signin')||req.url.includes('/user/signup')|| req.url.includes('/user/adminSignup')||req.url.includes('/trek/getTreks')){
         console.log("inside if")
         //token verification not needed call to the next function
         next()

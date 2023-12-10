@@ -5,6 +5,11 @@ const trekSchema=new mongoose.Schema({
         required: true,
         trekId:true
       },
+      imgUrl:{
+        type: String,
+        required: true,
+        
+      },
       name: {
         type: String,
         required: true,

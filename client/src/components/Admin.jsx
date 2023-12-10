@@ -14,12 +14,13 @@ export function Admin() {
     distance: "",
     duration: "",
     description: "",
-    price: ""
+    price: "",
+    imgUrl: "", 
   });
   const [editTrek, setEditTrek] = useState(null);
 
   useEffect(() => {
-    // Fetch initial data on component mount
+    
     fetchTreks();
   }, []);
 
@@ -57,9 +58,10 @@ export function Admin() {
           distance: "",
           duration: "",
           description: "",
-          price: ""
+          price: "",
+          imgUrl: "",
         });
-        // Fetch updated data after creating a new trek
+        
         fetchTreks();
       } else {
         console.error("Error creating trek:", response.status);
@@ -83,7 +85,8 @@ export function Admin() {
       distance: trek.distance,
       duration: trek.duration,
       description: trek.description,
-      price: trek.price
+      price: trek.price,
+      imgUrl: trek.imgUrl, 
     });
   };
 
@@ -108,9 +111,10 @@ export function Admin() {
           distance: "",
           duration: "",
           description: "",
-          price: ""
+          price: "",
+          imgUrl: "", 
         });
-        // Fetch updated data after editing the trek
+        
         fetchTreks();
       } else {
         console.error("Error updating trek:", response.status);
@@ -131,7 +135,7 @@ export function Admin() {
         }
       );
       if (response.status === 200) {
-        // Fetch updated data after deleting a trek
+       
         fetchTreks();
       } else {
         console.error("Error deleting trek:", response.status);
@@ -199,6 +203,13 @@ export function Admin() {
             value={newTrek.price}
             onChange={handleInputChange}
           />
+          <input
+            type="text"
+            name="imgUrl"  // New field for the imgUrl URL
+            placeholder="imgUrl URL"
+            value={newTrek.imgUrl}
+            onChange={handleInputChange}
+          />
           <button type="button" onClick={handleCreateTrek}>
             Create Trek
           </button>
@@ -223,7 +234,7 @@ export function Admin() {
         </ul>
       </div>
 
-      {/* Edit Form */}
+    
       {editTrek && (
         <div>
           <h5>Edit Trek</h5>
@@ -275,6 +286,13 @@ export function Admin() {
               name="price"
               placeholder="Price"
               value={newTrek.price}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="imgUrl"  
+              placeholder="imgUrl URL"
+              value={newTrek.imgUrl}
               onChange={handleInputChange}
             />
             <button type="button" onClick={handleSaveEdit}>
