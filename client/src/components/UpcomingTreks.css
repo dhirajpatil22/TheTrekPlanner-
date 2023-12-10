@@ -1,0 +1,9 @@
+.card-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .card-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.9s;
+  }
