@@ -3,6 +3,10 @@ import { Header } from "./Header";
 import { Form, Col, Row, Button, Alert } from "react-bootstrap";
 import { useState } from "react";
 import { signUpAdmin, signUpUser } from "../services/userApis";
+import user_icon from './assets/person.png';
+import email_icon from './assets/email.png';
+import password_icon from './assets/password.png';
+import './SignUp.css';
 
 export function SignUp() {
   const [formData, setFormdata] = useState({ name: "", email: "", password: "" });
@@ -71,43 +75,67 @@ export function SignUp() {
 
   return (
     <Container>
-      <Header text="Register Here" />
+      <div className="header">
+      <div className="text">Sign Up</div>
+      <div className="underline"></div>
+      </div>
       <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter Name" name="name" value={formData.name} onChange={handleChange} />
+        <Form.Group className="inputs">
+          <div className="input">
+            <img src={user_icon} alt="" />
+            <Form.Control
+              type="text"
+              placeholder="Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input">
+            <img src={email_icon} alt="" />
+            <Form.Control
+              type="email"
+              placeholder="Email Id"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input">
+            <img src={password_icon} alt="" />
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+          </div>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="text" placeholder="Enter email" name="email" value={formData.email} onChange={handleChange} />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="text" placeholder="Enter password" name="password" value={formData.password} onChange={handleChange} />
-        </Form.Group>
-
-        <Form.Check
-          type="radio"
-          label="User"
-          name="user-type"
-          value="user"
-          checked={userType === "user"}
-          onChange={handleRadioChange}
-        />
-        <Form.Check
-          type="radio"
-          label="Admin"
-          name="user-type"
-          value="admin"
-          checked={userType === "admin"}
-          onChange={handleRadioChange}
-        />
-
-        <Button variant="primary" type="submit">
-          Submit
+        <div className="radio-buttons">
+          <Form.Check
+            type="radio"
+            label="User"
+            name="user-type"
+            value="user"
+            checked={userType === 'user'}
+            onChange={handleRadioChange}
+          />
+          <Form.Check
+            type="radio"
+            label="Admin"
+            name="user-type"
+            value="admin"
+            checked={userType === 'admin'}
+            onChange={handleRadioChange}
+          />
+        </div>
+        <Button className="submit" variant="primary" type="submit">
+          Sign Up        
         </Button>
+        
+        
       </Form>
 
       {validationError && <Alert variant="danger">{validationError}</Alert>}
@@ -116,3 +144,13 @@ export function SignUp() {
     </Container>
   );
 }
+
+
+
+
+
+
+
+
+
+

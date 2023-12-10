@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import { Header } from "./Header";
 import { Form, Button, Alert } from "react-bootstrap";
+import email_icon from './assets/email.png';
+import password_icon from './assets/password.png';
+import './SignIn.css';
 
 import { signIn } from "../services/userApis";
 import { useNavigate } from "react-router-dom";
@@ -52,35 +55,46 @@ export function SignIn() {
 
   return (
     <Container>
-      <Header text="SignIn Here" />
+    <div className="header">
+    <div className="text">Sign In</div>
+    <div className="underline"></div>
+    </div>
       {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
       {successMessage && <Alert variant="success">{successMessage}</Alert>}
       <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Email</Form.Label>
+          <div className="input">
+          <img src={email_icon} alt="" />
           <Form.Control
             type="text"
-            placeholder="Enter email"
+            placeholder="Email"
             name="email"
             value={formData.email}
             onChange={handleChange}
           />
+          </div>
         </Form.Group>
+        
 
+       
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          <div className="input">
+          <img src={password_icon} alt="" />
           <Form.Control
             type="password"
-            placeholder="Enter password"
+            placeholder="Password"
             name="password"
             value={formData.password}
             onChange={handleChange}
           />
+          </div>
         </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Login
+        
+        
+        <Button className="submit" variant="primary" type="submit" >
+          Sign In
         </Button>
+      
       </Form>
     </Container>
   );
