@@ -14,12 +14,15 @@
 import { Alert, Container } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
-
+import "./about.css";
 export function AboutUs() {
+  const cardStyle = { width: "18rem", height: "auto" }; // Add a fixed height
+  const imageStyle = { height: "350px", objectFit: "cover" }; // Add a fixed height for the images
+
   return (
     <CardGroup>
-      <Card border="warning" style={{ width: "180rem" }}>
-        <Card.Img variant="top" src="images/d1.jpeg" />
+      <Card border="warning" style={cardStyle}>
+        <Card.Img variant="top" src="images/d1n.jpg" style={imageStyle} />
         <Card.Body>
           <Card.Title>Dhiraj Patil</Card.Title>
           <Card.Text>
@@ -33,8 +36,8 @@ export function AboutUs() {
       </Card>
       <br />
 
-      <Card border="warning" style={{ width: "180rem" }}>
-        <Card.Img variant="top" src="images/d2.jpeg" />
+      <Card border="warning" style={cardStyle}>
+        <Card.Img variant="top" src="images/v1.jpeg" style={imageStyle} />
         <Card.Body>
           <Card.Title>Vedantika Patil</Card.Title>
           <Card.Text>
@@ -46,8 +49,8 @@ export function AboutUs() {
           <small className="text-muted">GameChangers</small>
         </Card.Footer>
       </Card>
-      <Card border="warning" style={{ width: "180rem" }}>
-        <Card.Img variant="top" src="images/d3.jpeg" />
+      <Card border="warning" style={cardStyle}>
+        <Card.Img variant="top" src="images/y3n.jpg" style={imageStyle} />
         <Card.Body>
           <Card.Title>Yash Kamble</Card.Title>
           <Card.Text>

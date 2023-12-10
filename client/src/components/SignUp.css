@@ -134,3 +134,7 @@
     transform: scale(1.1);
 }
 
+.custom-container {
+    margin-top: 0;
+    padding-top: 0;
+  }

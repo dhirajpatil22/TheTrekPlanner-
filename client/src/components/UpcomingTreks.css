@@ -1,9 +1,28 @@
-.card-container {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .card-hover:hover {
-    transform: scale(1.05);
-    transition: transform 0.9s;
-  }
+/* UpcomingTreks.css or your preferred CSS file */
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+.card-img-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* .card-title,
+.card-text,
+.btn-primary {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+} */
+
+.card:hover .card-title,
+.card:hover .card-text,
+.card:hover .btn-primary {
+  opacity: 1;
+}
