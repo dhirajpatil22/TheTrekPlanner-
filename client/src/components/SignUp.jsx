@@ -6,9 +6,7 @@ import { signUpAdmin, signUpUser } from "../services/userApis";
 import user_icon from './assets/person.png';
 import email_icon from './assets/email.png';
 import password_icon from './assets/password.png';
-import img1 from './assets/1.png';
-import img2 from './assets/3.png';
-import img3 from './assets/4.png';
+
 import './SignUp.css';
 
 export function SignUp() {
