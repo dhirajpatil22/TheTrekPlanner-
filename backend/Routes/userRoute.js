@@ -62,7 +62,8 @@ userRouter.post("/signup", (req, res) => {
 });
 
 userRouter.post("/AdminSignup", (req, res) => {
-    let uuid = uuidv4();
+    const uuid = uuidv4();
+    
     const { name, email, phone, address } = req.body;
     // Password hashing for data security
     const password = cryptoJs.SHA256(req.body.password).toString(cryptoJs.enc.Hex);
