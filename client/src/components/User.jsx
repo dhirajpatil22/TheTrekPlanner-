@@ -1,4 +1,4 @@
- //import { useLocation } from "react-router-dom";
+ import { useLocation } from "react-router-dom";
 import './User.css';
 
 // export default User;
@@ -7,11 +7,14 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
 export const User = () => {
+      const location = useLocation();
+    const { fromLogin } = location.state || {};
+    console.log("Props from login:", fromLogin);
   const initialProfile = {
-    username: 'Yash',
-    email: 'yash@gmail.com',
+    username:fromLogin.data.name ,
+    email: fromLogin.data.email,
     mobile: '', // Added empty string for mobile
-    bio: 'Hello, I am Yash.',
+    bio: `Hello, I am ${fromLogin.data.name}`,
   };
 
   const [profile, setProfile] = useState(initialProfile);
