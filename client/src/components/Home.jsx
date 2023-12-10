@@ -70,14 +70,16 @@ export function Home() {
         <Container>
           <Card
             className="bg-dark text-white"
-            style={{ width: "300px", height: "350px", margin: "10px" }}
+            style={{ width: "300px", height: "400px", margin: "10px" }}
           >
-            <Card.Img variant="top" src="images/1.webp" />
+            <Card.Img variant="top" src="images/pratapgad.jpg" />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>PratapGad</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Pratapgad is a historic hill fort located in Maharashtra, India,
+                known for its strategic significance and as the site of the
+                Battle of Pratapgad between Shivaji Maharaj and Afzal Khan in
+                1659.
               </Card.Text>
               <Button variant="primary">Go somewhere</Button>
             </Card.Body>
