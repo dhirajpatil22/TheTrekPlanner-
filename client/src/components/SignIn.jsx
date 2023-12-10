@@ -5,6 +5,7 @@ import { Form, Button, Alert } from "react-bootstrap";
 import email_icon from './assets/email.png';
 import password_icon from './assets/password.png';
 import './SignIn.css';
+import img2 from './assets/3.png';
 
 import { signIn } from "../services/userApis";
 import { useNavigate } from "react-router-dom";
@@ -54,6 +55,7 @@ export function SignIn() {
   };
 
   return (
+    <div className="background-image">
     <Container>
     <div className="header">
     <div className="text">Sign In</div>
@@ -97,5 +99,6 @@ export function SignIn() {
       
       </Form>
     </Container>
+    </div>
   );
 }
