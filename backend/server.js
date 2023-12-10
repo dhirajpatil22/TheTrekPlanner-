@@ -21,14 +21,16 @@ app.use((req,res,next)=>{
         next()
     }
     else{
-       console.log(req,"REQQQQQ")
+       console.log(req.headers,"REQQQQQ")
         const token = req.headers["authorization"];
    
         if(token){
             try{
                 
                 const data = jwt.verify(token, process.env.JWT_KEY);//returns payload 
+                data?console.log("Token Verified........."+token):console.log("Token Is not verified yet..."+token);
                 req.userId=data.id//setting userId object in req body 
+                
                 next()
             }
             catch(exe){

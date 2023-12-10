@@ -3,9 +3,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { LinkContainer } from "react-router-bootstrap";
 import Logo from "./15.png";
+import './NavigationBar.css';
 
 export function NavigationBar() {
   return (
+    <div className="bar-container">
     <Navbar
       bg="dark"
       data-bs-theme="dark"
@@ -45,5 +47,6 @@ export function NavigationBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </div>
   );
 }

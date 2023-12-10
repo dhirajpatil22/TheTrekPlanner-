@@ -44,6 +44,8 @@ export const User = () => {
   };
 
   return (
+    <div className="background-image">
+    
     <div className="profile-container">
       {editing ? (
         <div>
@@ -102,24 +104,44 @@ export const User = () => {
         <div>
         <div className="text">User Profile</div>
         <div className="underline"></div>
-        <p></p>
+          <br></br>
           <p>
-            <strong>Username:</strong> {profile.username}
+            <strong>Username :</strong> {profile.username}
           </p>
           <p>
-            <strong>Email:</strong> {profile.email}
+            <strong>Email :</strong> {profile.email}
           </p>
           <p>
-            <strong>Mobile No:</strong> {profile.mobile}
+            <strong>Mobile No :</strong> {profile.mobile}
           </p>
           <p>
-            <strong>Bio:</strong> {profile.bio}
+            <strong>Age :</strong> {profile.age}
+          </p>
+          <p>
+            <strong>Health issues :</strong> {profile.health}
+          </p>
+          <p>
+            <strong>Bio :</strong> {profile.bio}
           </p>
           <Button variant="primary" onClick={handleEditClick}>
             Edit
           </Button>
         </div>
       )}
+    </div>
+    
+    <div className="userplan">
+      <div className="text">Trek Plan Details</div>
+      <div className="underline"></div>
+      <br></br>
+      <p>
+      <strong>Trek Name:</strong> Devgiri Fort </p>
+      <p>
+      <strong>Duration:</strong> 3 hrs </p>
+      <p>
+      <strong>Cost:</strong> 1000 Rs </p>
+      {/* Add more details as needed */}
+    </div>
     </div>
   );
 };

@@ -6,6 +6,9 @@ import { signUpAdmin, signUpUser } from "../services/userApis";
 import user_icon from './assets/person.png';
 import email_icon from './assets/email.png';
 import password_icon from './assets/password.png';
+import img1 from './assets/1.png';
+import img2 from './assets/3.png';
+import img3 from './assets/4.png';
 import './SignUp.css';
 
 export function SignUp() {
@@ -15,6 +18,8 @@ export function SignUp() {
   const [responseMessage, setResponseMessage] = useState("");
   const [validationError, setValidationError] = useState("");
 
+  
+  
   const handleChange = (e) => {
     setFormdata({ ...formData, [e.target.name]: e.target.value });
   };
@@ -74,7 +79,9 @@ export function SignUp() {
   };
 
   return (
-    <Container>
+    <div className="background-image">
+    <Container>   
+    
       <div className="header">
       <div className="text">Sign Up</div>
       <div className="underline"></div>
@@ -142,6 +149,7 @@ export function SignUp() {
 
       {isSubmitted && responseMessage && <Alert variant="success">{responseMessage}</Alert>}
     </Container>
+    </div>
   );
 }
 
