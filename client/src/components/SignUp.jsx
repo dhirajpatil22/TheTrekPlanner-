@@ -131,10 +131,11 @@ export function SignUp() {
             onChange={handleRadioChange}
           />
         </div>
-
-        <Button variant="primary" type="submit" className="submit">
-          Sign Up
+        <Button className="submit" variant="primary" type="submit">
+          Sign Up        
         </Button>
+        
+        
       </Form>
 
       {validationError && <Alert variant="danger">{validationError}</Alert>}

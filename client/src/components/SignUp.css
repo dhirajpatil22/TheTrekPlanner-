@@ -84,6 +84,7 @@
     margin-left: 360px;
     margin-top: 23px;
     
+    
 
 }
 
@@ -93,16 +94,18 @@
     align-items: center;
     margin-left: 50px;
     margin-top: 25px;
+    
 }
 
 .submit{
+    background-color: #4c00b4;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 150px;
     height: 59px;
     color: #fff;
-    background: #4c00b4;
+    
     border-radius: 50px;
     font-size: 19px;
     font-weight: 700;
@@ -115,10 +118,8 @@
     background: #4c00b4;
     transform: scale(1.1);
 }
-.gray{
-    background: #EAEAEA;
-    color: #676767;
-}
+
+
 
 .admin-container{
     padding-left: 690px;
