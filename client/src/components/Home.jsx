@@ -22,59 +22,58 @@ export function Home() {
 
   return (
     <div style={{ backgroundColor: "#282c34" }}>
-     
       <Container>
         <Carousel>
           <Carousel.Item>
             <img className="slide w-100" src="images/5.jpg" alt="First slide" />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Durgnaad</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="slide w-100" src="images/9.jpg" alt="Second slide" />
+            <img
+              className="slide w-100"
+              src="images/9.jpg"
+              alt="Second slide"
+            />
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>Durgnaad</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="slide w-100" src="images/8.jpg" alt="Third slide" />
             <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <h3>Durgnaad</h3>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </Container>
 
       <Row className="justify-content-around">
-        {treks.data && treks.data.length > 0 && treks.data.map((trek) => (
-
-            <Col  xs={12} md={6} lg={4}>
+        {treks.data &&
+          treks.data.length > 0 &&
+          treks.data.map((trek) => (
+            <Col xs={12} md={6} lg={4}>
               <Card
-            className="bg-dark text-white"
-            style={{ width: "300px", height: "600px", margin: "10px" }}
-          >
-            <Card.Img variant="top" src={`${trek.imgUrl}`} />
-            <Card.Body>
-           
-
-              <Card.Title>{` 🚩 ${trek.name}`} {`₹ ${trek.price}`}</Card.Title>
-              <Card.Text>
-              📍 location:{` ${trek.location}`}
-              <br />
-                distance:{trek.distance}
-              <br />
-              difficulty:{trek.difficulty}
-              </Card.Text>
-              <Card.Text>
-              {trek.description}
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
+                className="bg-dark text-white"
+                style={{ width: "300px", height: "600px", margin: "10px" }}
+              >
+                <Card.Img variant="top" src={`${trek.imgUrl}`} />
+                <Card.Body>
+                  <Card.Title>
+                    {` 🚩 ${trek.name}`} {`₹ ${trek.price}`}
+                  </Card.Title>
+                  <Card.Text>
+                    📍 location:{` ${trek.location}`}
+                    <br />
+                    distance:{trek.distance}
+                    <br />
+                    difficulty:{trek.difficulty}
+                  </Card.Text>
+                  <Card.Text>{trek.description}</Card.Text>
+                  <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+              </Card>
             </Col>
           ))}
       </Row>
