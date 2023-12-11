@@ -55,7 +55,7 @@ export function Home() {
             <Col  xs={12} md={6} lg={4}>
               <Card
             className="bg-dark text-white"
-            style={{ width: "300px", height: "400px", margin: "10px" }}
+            style={{ width: "300px", height: "600px", margin: "10px" }}
           >
             <Card.Img variant="top" src={`${trek.imgUrl}`} />
             <Card.Body>

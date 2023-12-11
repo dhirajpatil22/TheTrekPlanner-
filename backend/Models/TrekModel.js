@@ -23,7 +23,7 @@ const trekSchema=new mongoose.Schema({
       },
       difficulty: {
         type: String,
-        enum: ['Easy', 'Moderate', 'Difficult'],
+        // enum: ['Easy', 'Moderate', 'Difficult'],
         required: true,
       },
       distance: {
