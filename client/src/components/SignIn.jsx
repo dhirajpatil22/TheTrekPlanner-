@@ -4,6 +4,8 @@ import { Header } from "./Header";
 import { Form, Button, Alert } from "react-bootstrap";
 import email_icon from './assets/email.png';
 import password_icon from './assets/password.png';
+import './SignIn.css';
+import img2 from './assets/3.png';
 
 import { signIn } from "../services/userApis";
 import { useNavigate } from "react-router-dom";
@@ -53,14 +55,18 @@ export function SignIn() {
   };
 
   return (
+    <div className="background-image">
     <Container>
-      <Header text="Sign In" />
+    <div className="header">
+    <div className="text">Sign In</div>
+    <div className="underline"></div>
+    </div>
       {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
       {successMessage && <Alert variant="success">{successMessage}</Alert>}
       <Form onSubmit={handleLogin}>
-      <div className="input">
-      <img src={email_icon} alt="" />
         <Form.Group className="mb-3" controlId="formBasicPassword">
+          <div className="input">
+          <img src={email_icon} alt="" />
           <Form.Control
             type="text"
             placeholder="Email"
@@ -68,13 +74,14 @@ export function SignIn() {
             value={formData.email}
             onChange={handleChange}
           />
+          </div>
         </Form.Group>
-        </div>
+        
 
-        <div className="input">
-        <img src={password_icon} alt="" />
+       
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          
+          <div className="input">
+          <img src={password_icon} alt="" />
           <Form.Control
             type="password"
             placeholder="Password"
@@ -82,13 +89,16 @@ export function SignIn() {
             value={formData.password}
             onChange={handleChange}
           />
+          </div>
         </Form.Group>
-        </div>
-
-        <Button variant="primary" type="submit">
-          Login
+        
+        
+        <Button className="submit" variant="primary" type="submit" >
+          Sign In
         </Button>
+      
       </Form>
     </Container>
+    </div>
   );
 }

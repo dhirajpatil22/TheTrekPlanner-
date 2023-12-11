@@ -11,6 +11,9 @@ import { SignIn } from './components/SignIn';
 
 import { Admin } from './components/Admin';
 import { User } from './components/User';
+import { UpcomingTreks } from './components/UpcomingTreks';
+import { Footer } from './components/Footer';
+//import User from './components/User';
 
 function App() {
   return (
@@ -25,7 +28,10 @@ function App() {
       <Route path='/about-us' element={<AboutUs/>}></Route>
       <Route path='/admin' element={<Admin/>}></Route>
       <Route path='/user' element={<User/>}></Route>
+      <Route path='/upcoming-treks' element={<UpcomingTreks/>}></Route> 
+
     </Routes>
+    <Footer></Footer>
     </BrowserRouter>
   );
 }
