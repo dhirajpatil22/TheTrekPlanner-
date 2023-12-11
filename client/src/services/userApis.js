@@ -45,34 +45,7 @@ export async function getAllTreks(){
     }
    
 }
-export async function fetchStudents(){
-    try {
-        const res=await axios.post('http://127.0.0.1:4000/student')
-        return res.data; 
-    } catch (error) {
-        console.log(error)
-    }
-   
-}
-export async function saveStudent(studentData){
-    try {
-        const res=await axios.post('http://127.0.0.1:4000/student',studentData)
-        return res.data; 
-    } catch (error) {
-        console.log(error)
-    }
-   
-}
-export async function deleteStudent(id){
-    try {
-       await axios.delete(`http://127.0.0.1:4000/student/${id}`);
-     
-       
-    } catch (error) {
-        console.log(error)
-    }
-   
-}
+
 
 
 
