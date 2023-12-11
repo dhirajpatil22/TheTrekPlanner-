@@ -1,0 +1,4 @@
+.aboutus{
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover; /* This ensures the image covers the specified height */
+  }
